@@ -1,0 +1,288 @@
+/* Login/Sign-Up Form Styles */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+    transition: background-color 0.3s, color 0.3s, transform 0.5s ease-in-out;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #d33434;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.navbar nav ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 10px;border-radius: 10px;
+    transition:0.3s;
+    text-decoration: none;
+}
+
+
+
+#line{
+    background-color: wheat;
+    height: 50px;
+    width: 3px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.navbar nav ul li:hover {
+    
+ 
+    box-shadow: 0 0 25px rgba(black),
+                0 0 50px rgba(black),
+                0 0 100px rgba(black);
+
+                transform: scale(1.2);
+
+}
+
+
+
+/* Dark Mode Button */
+.dark-mode-btn-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-btn {
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-btn:hover {
+    background-color: #45a049;
+}
+
+
+.login-form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #d33434;
+}
+
+.login-form p {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-form a {
+    color: #d33434;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+.form-group input {
+    width: 90%; /* Adjust width to make it look centered */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center; /* Center align the text inside the input */
+    margin: 0 auto; /* Center the input horizontally */
+    display: block; /* Ensure it takes full width */
+}
+/* Buttons */
+button[type="submit"], .google-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #d33434;
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: #b32b2b;
+    transform: scale(1.05);
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+.google-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.google-btn:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+}
+
+/* OR Divider */
+.or-divider {
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+}
+
+.or-divider span {
+    background-color: #f9f9f9;
+    padding: 0 10px;
+    color: #333;
+    position: relative;
+    z-index: 1;
+}
+
+.or-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ccc;
+    z-index: 0;
+}
+
+/* Error Message */
+.error-message {
+    color: #d33434;
+    margin-top: 10px;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .navbar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .login-form, body.dark-mode .signup-form {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .login-form h2, body.dark-mode .signup-form h2 {
+    color: #fff;
+}
+
+body.dark-mode .login-form p, body.dark-mode .signup-form p {
+    color: #ccc;
+}
+
+body.dark-mode .form-group label {
+    color: #ccc;
+}
+
+body.dark-mode .form-group input {
+    background-color: #444;
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .google-btn {
+    background-color: #444;
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .google-btn:hover {
+    background-color: #555;
+}
+
+body.dark-mode .error-message {
+    color: #d33434;
+}
+
+body.dark-mode .footer {
+    background-color: #333;
+    color: #fff;
+}
+
+
+.footer{
+    place-items: center;
+    text-align: center;
+    float: right;
+}
+.idk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
